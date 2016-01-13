@@ -163,15 +163,21 @@ def get_credential(credential_file, account):
     '''
     Get the credential in order to send email.
     The credential file (e.g. '.credentials') is in the following json format:
+
     {"default": {
-      "user": "user1"
-      , "pwd": "yourcrazypassword"
-      }
-    , "projx": {
-      "user": "user2"
-      , "pwd": "anothercrazypassword"
+      "user": "youraccountname"
+      , "pwd": "kulhsjfhuyjgdfh"
+      , "from": "whateverwhitelistedsender@gmail.com"
+      , "kindle": ["yourkindleaccount@kindle.com"]
+      },
+    "projx": {
+      "user": "youraccountname2"
+      , "pwd": "tfsdejybhsdse"
+      , "from": "whateverwhitelistedsender2@gmail.com"
+      , "kindle": ["yourkindleaccount@kindle.com"]
       }
     }
+
     '''
     with open(credential_file) as cred:
         credentials = json.load(cred)
@@ -189,8 +195,8 @@ if __name__ == '__main__':
     name = '20thCB'
     start_page = 1
     stop_page = 40
-    chapter_start = 34
-    chapter_end = 35
+    chapter_start = 36
+    chapter_end = 60
 
     # loop to download your manga
     for chapter in range(chapter_start, chapter_end+1):
